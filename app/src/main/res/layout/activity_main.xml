@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainActivityLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_margin="12dp"
+            android:gravity="center_vertical"
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/startSearchView"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:hint="@string/search_hint"
+                android:background="@color/white"
+                android:elevation="6dp"
+                android:padding="8dp"
+                android:textSize="18sp"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/updatePageBtn"
+                android:padding="4dp"
+                android:src="@drawable/ic_sync"
+                android:tint="@color/white"
+                android:layout_marginLeft="4dp"
+                android:layout_width="32dp"
+                android:layout_height="32dp" />
+        </LinearLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:id="@+id/webViewContainer"
+        android:background="@color/colorPrimary"
+        android:layout_marginBottom="48dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_gravity="bottom"
+        android:id="@+id/mainMenuContainer"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        app:layout_behavior="com.zhj.browser.ui.behavior.BottomToolBarBehavior"
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/goBackBtn"
+            android:src="@drawable/ic_chevron_left"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:padding="8dp"
+            android:focusable="true"
+            android:clickable="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_height="match_parent" />
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/goForwardBtn"
+            android:src="@drawable/ic_chevron_right"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:padding="8dp"
+            android:focusable="true"
+            android:clickable="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_height="match_parent" />
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/toolMenu"
+            android:src="@drawable/ic_menu"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:padding="8dp"
+            android:focusable="true"
+            android:clickable="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_height="match_parent" />
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/goHomeBtn"
+            android:src="@drawable/ic_home"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:padding="8dp"
+            android:focusable="true"
+            android:clickable="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
